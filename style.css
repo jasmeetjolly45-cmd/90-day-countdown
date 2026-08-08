@@ -35,8 +35,8 @@ html, body {
         #12301d
     );
     width: 100%;
-    max-width: 360px;
-    padding: 28px 24px;
+    max-width: 380px;
+    padding: 26px 20px;
     border-radius: 26px;
     text-align: center;
     color: #f8f4ec;
@@ -57,7 +57,7 @@ html, body {
     text-transform: uppercase;
     color: #f8f4ec;
     opacity: 0.8;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 /* ==========================
@@ -67,8 +67,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    margin: 14px 0;
+    gap: 8px;
+    margin: 12px 0;
     width: 100%;
 }
 
@@ -80,7 +80,7 @@ html, body {
 }
 
 .time-number {
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1;
     color: #f8f4ec;
@@ -88,27 +88,27 @@ html, body {
 }
 
 .time-label {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     color: #f8f4ec;
     opacity: 0.7;
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 .time-separator {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.4);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .divider {
     width: 85%;
     height: 1px;
     background: rgba(255, 255, 255, 0.15);
-    margin: 12px 0;
+    margin: 10px 0;
 }
 
 /* ==========================
@@ -128,9 +128,9 @@ html, body {
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.25);
     color: #f8f4ec;
-    padding: 10px 0;
-    font-size: 15px;
-    margin-bottom: 6px;
+    padding: 9px 0;
+    font-size: 14px;
+    margin-bottom: 4px;
 }
 
 .primary-btn:hover {
@@ -141,7 +141,7 @@ html, body {
     display: flex;
     gap: 10px;
     width: 100%;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 .secondary-btn {
@@ -149,7 +149,7 @@ html, body {
     background: rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: #f8f4ec;
-    padding: 7px 0;
+    padding: 6px 0;
     font-size: 13px;
     opacity: 0.9;
 }
@@ -164,7 +164,7 @@ html, body {
 }
 
 .footer-text {
-    font-size: 16px;
+    font-size: 15px;
     font-style: italic;
     color: #f8f4ec;
     opacity: 0.85;
@@ -177,20 +177,12 @@ html, body {
 @media (max-width: 480px) {
     .widget-box {
         max-width: 300px;
-        padding: 22px 18px;
+        padding: 20px 14px;
     }
     .time-number {
-        font-size: 36px;
+        font-size: 28px;
     }
-    .primary-btn {
-        font-size: 14px;
-        padding: 8px 0;
-    }
-    .secondary-btn {
-        font-size: 12px;
-        padding: 6px 0;
-    }
-    .footer-text {
-        font-size: 14px;
+    .time-separator {
+        font-size: 20px;
     }
 }
