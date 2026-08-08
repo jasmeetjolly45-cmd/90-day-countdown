@@ -15,23 +15,28 @@
     <div class="title">YOUR CURRENT SEASON</div>
 
     <!-- Start Button at the Top -->
-    <button id="start-btn" class="btn primary-btn" onclick="startCountdown()">Start Countdown</button>
+    <button id="start-btn" class="btn primary-btn" onclick="startCountdownBtn()">Start Countdown</button>
 
-    <!-- Countdown Display -->
+    <!-- Countdown Display with Seconds -->
     <div class="countdown-display">
         <div class="time-block">
-            <span id="days-count" class="time-number">--</span>
+            <span id="days-count" class="time-number">90</span>
             <span class="time-label">DAYS</span>
         </div>
         <span class="time-separator">:</span>
         <div class="time-block">
-            <span id="hours-count" class="time-number">--</span>
+            <span id="hours-count" class="time-number">00</span>
             <span class="time-label">HOURS</span>
         </div>
         <span class="time-separator">:</span>
         <div class="time-block">
-            <span id="minutes-count" class="time-number">--</span>
+            <span id="minutes-count" class="time-number">00</span>
             <span class="time-label">MINS</span>
+        </div>
+        <span class="time-separator">:</span>
+        <div class="time-block">
+            <span id="seconds-count" class="time-number">00</span>
+            <span class="time-label">SECS</span>
         </div>
     </div>
 
