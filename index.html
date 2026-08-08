@@ -6,23 +6,41 @@
     <title>Season Countdown Widget</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="widget-box">
     <div class="title">YOUR CURRENT SEASON</div>
-    <div id="days-count" class="days-number">--</div>
-    <div class="days-label">DAYS REMAINING</div>
-    
+
+    <!-- Start Button at the Top -->
+    <button id="start-btn" class="btn primary-btn" onclick="startCountdown()">Start Countdown</button>
+
+    <!-- Countdown Display -->
+    <div class="countdown-display">
+        <div class="time-block">
+            <span id="days-count" class="time-number">--</span>
+            <span class="time-label">DAYS</span>
+        </div>
+        <span class="time-separator">:</span>
+        <div class="time-block">
+            <span id="hours-count" class="time-number">--</span>
+            <span class="time-label">HOURS</span>
+        </div>
+        <span class="time-separator">:</span>
+        <div class="time-block">
+            <span id="minutes-count" class="time-number">--</span>
+            <span class="time-label">MINS</span>
+        </div>
+    </div>
+
     <div class="divider"></div>
-    
-    <!-- Control Buttons -->
-    <div class="controls">
-        <button id="start-btn" class="btn" onclick="startCountdown()">Start</button>
-        <button id="stop-btn" class="btn" onclick="stopCountdown()">Stop</button>
-        <button id="reset-btn" class="btn" onclick="resetCountdown()">Reset</button>
+
+    <!-- Stop & Reset Buttons at the Bottom -->
+    <div class="bottom-controls">
+        <button id="stop-btn" class="btn secondary-btn" onclick="stopCountdown()">Stop</button>
+        <button id="reset-btn" class="btn secondary-btn" onclick="resetCountdown()">Reset</button>
     </div>
 
     <div class="footer-text">Make these days count.</div>
