@@ -1,8 +1,7 @@
 // ==========================
 // 90-DAY INTERACTIVE COUNTDOWN LOGIC
 // ==========================
-const TOTAL_DAYS = 90;
-const TOTAL_DURATION_MS = TOTAL_DAYS * 24 * 60 * 60 * 1000; // 90 days in milliseconds
+const TOTAL_DURATION_MS = 90 * 24 * 60 * 60 * 1000; // Exactly 90 days in milliseconds
 
 let countdownInterval = null;
 
@@ -43,20 +42,19 @@ function updateDisplay(endTime) {
 }
 
 function startCountdownBtn() {
-    // Sets a fresh 90-day target starting right now
+    // Force a fresh 90-day timer starting precisely right now
     const newEndTime = new Date().getTime() + TOTAL_DURATION_MS;
     setStoredEndTime(newEndTime);
-    
     runInterval(newEndTime);
 }
 
 function runInterval(endTime) {
-    stopCountdown(); // Clear any existing timer
-    updateDisplay(endTime);
+    stopCountdown(); // Clear any existing ticker
+    updateDisplay(endTime); // Update immediately so there's no 1-second delay
     
     countdownInterval = setInterval(() => {
         updateDisplay(endTime);
-    }, 1000); // Tick every second
+    }, 1000); // Tick every second reliably
 }
 
 function stopCountdown() {
@@ -70,14 +68,14 @@ function resetCountdown() {
     stopCountdown();
     localStorage.removeItem("season_end_time");
     
-    // Reset back to initial default state (90 days, 00 hours, 00 mins, 00 secs)
-    document.getElementById("days-count").textContent = TOTAL_DAYS;
+    // Reset display back to default 90 days
+    document.getElementById("days-count").textContent = "90";
     document.getElementById("hours-count").textContent = "00";
     document.getElementById("minutes-count").textContent = "00";
     document.getElementById("seconds-count").textContent = "00";
 }
 
-// On page load, check if a countdown was already running
+// Automatically pick up saved state when loaded in Notion
 window.onload = function() {
     const savedEndTime = getStoredEndTime();
     if (savedEndTime) {
