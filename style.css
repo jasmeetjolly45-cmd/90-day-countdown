@@ -19,7 +19,6 @@ html, body {
     overflow: hidden;
 }
 
-/* Matches Notion's exact dark mode background */
 @media (prefers-color-scheme: dark) {
     html, body {
         background-color: #191919 !important;
@@ -36,83 +35,128 @@ html, body {
         #12301d
     );
     width: 100%;
-    max-width: 340px;
-    padding: 26px 20px;
-    border-radius: 24px;
+    max-width: 360px;
+    padding: 28px 24px;
+    border-radius: 26px;
     text-align: center;
     color: #f8f4ec;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 /* ==========================
-   TYPOGRAPHY & LAYOUT
+   TYPOGRAPHY
 ========================== */
 .title {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: #f8f4ec;
-    opacity: 0.85;
-    margin-bottom: 8px;
+    opacity: 0.8;
+    margin-bottom: 14px;
 }
 
-.days-number {
-    font-size: 64px;
+/* ==========================
+   COUNTDOWN TIMER DISPLAY
+========================== */
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 14px 0;
+    width: 100%;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.time-number {
+    font-size: 42px;
     font-weight: 700;
     line-height: 1;
     color: #f8f4ec;
-    margin: 4px 0;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
-.days-label {
-    font-size: 13px;
+.time-label {
+    font-size: 10px;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #f8f4ec;
-    opacity: 0.8;
-    margin-bottom: 12px;
+    opacity: 0.7;
+    margin-top: 6px;
+}
+
+.time-separator {
+    font-size: 32px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 16px;
 }
 
 .divider {
-    width: 80%;
+    width: 85%;
     height: 1px;
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.15);
     margin: 12px 0;
 }
 
 /* ==========================
-   CONTROLS (BUTTONS)
+   BUTTON LAYOUT & STYLING
 ========================== */
-.controls {
+.btn {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 16px;
+    letter-spacing: 1px;
+}
+
+.primary-btn {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #f8f4ec;
+    padding: 10px 0;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.primary-btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.bottom-controls {
     display: flex;
-    gap: 8px;
+    gap: 10px;
+    width: 100%;
     margin-bottom: 14px;
 }
 
-.btn {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.secondary-btn {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     color: #f8f4ec;
-    padding: 6px 14px;
-    border-radius: 14px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    padding: 7px 0;
+    font-size: 13px;
+    opacity: 0.9;
 }
 
-.btn:hover {
-    background: rgba(255, 255, 255, 0.18);
-    transform: scale(1.03);
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 1;
 }
 
 .btn:active {
@@ -120,38 +164,33 @@ html, body {
 }
 
 .footer-text {
-    font-size: 17px;
+    font-size: 16px;
     font-style: italic;
     color: #f8f4ec;
-    opacity: 0.9;
+    opacity: 0.85;
     letter-spacing: 0.5px;
 }
 
 /* ==========================
-   MOBILE RESPONSIVE ADJUSTMENTS
+   MOBILE RESPONSIVE
 ========================== */
 @media (max-width: 480px) {
     .widget-box {
-        max-width: 290px;
-        padding: 20px 16px;
-        border-radius: 20px;
+        max-width: 300px;
+        padding: 22px 18px;
     }
-    .title {
-        font-size: 11px;
-        letter-spacing: 3px;
+    .time-number {
+        font-size: 36px;
     }
-    .days-number {
-        font-size: 54px;
+    .primary-btn {
+        font-size: 14px;
+        padding: 8px 0;
     }
-    .days-label {
-        font-size: 11px;
-        letter-spacing: 2.5px;
-    }
-    .btn {
-        padding: 5px 12px;
-        font-size: 13px;
+    .secondary-btn {
+        font-size: 12px;
+        padding: 6px 0;
     }
     .footer-text {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
