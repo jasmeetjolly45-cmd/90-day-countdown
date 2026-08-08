@@ -37,7 +37,7 @@ html, body {
     );
     width: 100%;
     max-width: 340px;
-    padding: 30px 24px;
+    padding: 26px 20px;
     border-radius: 24px;
     text-align: center;
     color: #f8f4ec;
@@ -58,37 +58,69 @@ html, body {
     text-transform: uppercase;
     color: #f8f4ec;
     opacity: 0.85;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .days-number {
-    font-size: 72px;
+    font-size: 64px;
     font-weight: 700;
     line-height: 1;
     color: #f8f4ec;
-    margin: 6px 0;
+    margin: 4px 0;
     letter-spacing: 2px;
 }
 
 .days-label {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #f8f4ec;
     opacity: 0.8;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .divider {
     width: 80%;
     height: 1px;
     background: rgba(255, 255, 255, 0.18);
-    margin: 14px 0 16px 0;
+    margin: 12px 0;
+}
+
+/* ==========================
+   CONTROLS (BUTTONS)
+========================== */
+.controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #f8f4ec;
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.03);
+}
+
+.btn:active {
+    transform: scale(0.97);
 }
 
 .footer-text {
-    font-size: 18px;
+    font-size: 17px;
     font-style: italic;
     color: #f8f4ec;
     opacity: 0.9;
@@ -101,7 +133,7 @@ html, body {
 @media (max-width: 480px) {
     .widget-box {
         max-width: 290px;
-        padding: 24px 18px;
+        padding: 20px 16px;
         border-radius: 20px;
     }
     .title {
@@ -109,13 +141,17 @@ html, body {
         letter-spacing: 3px;
     }
     .days-number {
-        font-size: 60px;
+        font-size: 54px;
     }
     .days-label {
-        font-size: 12px;
+        font-size: 11px;
         letter-spacing: 2.5px;
     }
+    .btn {
+        padding: 5px 12px;
+        font-size: 13px;
+    }
     .footer-text {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
